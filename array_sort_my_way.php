@@ -36,7 +36,7 @@ $list = array(
            array_push($index_arr, $list[$i]['group']);
            $key = array_search($list[$i]['group'], $index_arr);
            $sorted_arr[$key]['job'] = array();
-           $sorted_arr[$key]['hospital'] = array();
+           $sorted_arr[$key]['other'] = array();
        }
        $key = array_search($list[$i]['group'], $index_arr);
        array_push($sorted_arr[$key]['job'], $list[$i]);
