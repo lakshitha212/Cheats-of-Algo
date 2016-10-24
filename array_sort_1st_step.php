@@ -25,22 +25,19 @@ $list = array(
         'name' => 'lakshitha'
     )
 );
-?>
-<pre>
-   <?php
-   $sorted_arr = array();
-   $index_arr = array();
-   for ($i = 0; $i < count($list); $i++) {
-       if (in_array($list[$i]['group'], $index_arr)) {
-       } else {
-           array_push($index_arr, $list[$i]['group']);
-           $key = array_search($list[$i]['group'], $index_arr);
-           $sorted_arr[$key]['job'] = array();
-           $sorted_arr[$key]['other'] = array();
-       }
-       $key = array_search($list[$i]['group'], $index_arr);
-       array_push($sorted_arr[$key]['job'], $list[$i]);
-   }
-   print_r($sorted_arr);
-   ?>
-</pre>
+echo '<pre>';
+$sorted_arr = array();
+$index_arr = array();
+for ($i = 0; $i < count($list); $i++) {
+    if (in_array($list[$i]['group'], $index_arr)) {
+    } else {
+        array_push($index_arr, $list[$i]['group']);
+        $key = array_search($list[$i]['group'], $index_arr);
+        $sorted_arr[$key]['job'] = array();
+        $sorted_arr[$key]['other'] = array();
+    }
+    $key = array_search($list[$i]['group'], $index_arr);
+    array_push($sorted_arr[$key]['job'], $list[$i]);
+}
+print_r($sorted_arr);
+echo '</pre>';
